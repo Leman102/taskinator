@@ -1,3 +1,3 @@
 # Taskinator
 
-## Track ypour tasks with Taskinator tool!
+## Track your tasks with Taskinator tool!
