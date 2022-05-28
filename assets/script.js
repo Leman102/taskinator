@@ -10,10 +10,12 @@
 // tasksToDoEl.appendChild(taskItemEl);
 // //add the same css style use .className 
 // taskItemEl.className = "task-item";
-var buttonEl = document.querySelector("#save-task");
+var formEl = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 
-var createTaskHandler = function(){
+var createTaskHandler = function(event){
+    //prevent to refresh the webpage in the browser as sson as we run this code
+    event.preventDefault();
     var listItemEL = document.createElement("li");
     listItemEL.className = "task-item";
     listItemEL.textContent = "This is a new task";
@@ -21,4 +23,4 @@ var createTaskHandler = function(){
 }
 //add event listener to add a new item
 
-buttonEl.addEventListener("click",createTaskHandler);
+formEl.addEventListener("submit",createTaskHandler);
