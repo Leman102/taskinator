@@ -214,7 +214,10 @@ var editTask = function(taskId) {
 //delete item from the list
 var deleteTask = function(taskId){
     var taskSelected = document.querySelector(".task-item[data-task-id='" + taskId + "']");
-    taskSelected.remove();
+    var confirmDelete= confirm("Do you want to delete this task?");
+    if (confirmDelete){
+        taskSelected.remove();
+    }
 }
 
 // Create a new task
